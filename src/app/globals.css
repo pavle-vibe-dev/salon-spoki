@@ -180,3 +180,13 @@
   box-shadow: 0 8px 40px rgba(0, 9, 88, 0.12);
   transform: translateY(-4px);
 }
+
+/* ── Mobile responsive overrides ── */
+@media (max-width: 640px) {
+  .btn {
+    height: 40px;
+    padding-inline: 1rem;
+    padding-block: 0.375rem;
+    font-size: 13px;
+  }
+}

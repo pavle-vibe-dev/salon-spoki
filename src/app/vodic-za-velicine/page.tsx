@@ -16,7 +16,7 @@ const categories = [
     description:
       "Ovi mališani su ukras svakog doma, ali njihova dlaka i koža zahtevaju posebnu pažnju. Često su skloni mršenju iza ušiju i na šapama, pa je redovno kupanje i feniranje ključno za njihovo zdravlje i lep izgled.",
     breeds:
-      "Maltezer, Pomeranac (Boo), Jorkširski terijer (Jorki), Ši-cu, Pudla (Toy i patuljasta), Čivava, Mops, Francuski buldog, Pekinezer, Patuljasti šnaucer, Bišon.",
+      "Jorkširski terijer (Jorki), Čivava, Nemački špic, Pomeranac, Maltezer, Toy pudla, Papilon, Jazavčar, Koton de Tulear, Patuljasti šnaucer, Bišon friz, Havanezer, Ši-cu, Pekinezer.",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const categories = [
     description:
       "Srednji psi su uglavnom veoma aktivni istraživači, što znači — mnogo više šetnje, ali i više blata i čičkova u dlaci! Njihov tretman obuhvata temeljno raščešljavanje, uklanjanje poddlake i precizno šišanje kako bi ostali uredni i zaštićeni tokom svih avantura.",
     breeds:
-      "Koker španijel, Korgi, Srednja pudla, Bigl, Engleski buldog, Vižla, Šetlandski ovčar (Šelti), Basenji, Boston terijer, Lagoto Romanjolo.",
+      "Border koli, Koker španijel, Bigl, Bretonac, Srednji šnaucer, Srednja pudla, Francuski buldog, Šiba inu, Korgi, Lagoto romanjolo, Engleski špringer španijel, Irski terijer, Puli.",
   },
   {
     id: 3,
@@ -36,9 +36,9 @@ const categories = [
     image: "/images/dog-categ-3.png",
     color: "#3f7a8e",
     description:
-      "Veliki psi znače i veliku količinu dlake, posebno u periodima linjanja. Za njih je ključan tretman dubinskog kupanja i profesionalnog izduvavanja (furminiranja) poddlake, kako bi se smanjilo linjanje u kući i omogućilo koži da diše pod gustom dlakom.",
+      "Veliki psi znače i veliku količinu dlake, posebno u periodima linjanja. Za njih je ključan tretman dubinskog kupanja i profesionalnog tretmana protiv linjanja (izduvavanja poddlake), kako bi se smanjilo linjanje u kući i omogućilo koži da diše pod gustom dlakom.",
     breeds:
-      "Zlatni retriver, Labrador retriver, Nemački ovčar, Standardna (kraljevska) pudla, Bokser, Samojed, Sibirski haski, Border koli, Dalmatinac, Čau-čau.",
+      "Zlatni retriver, Labrador retriver, Belgijski ovčar, Baset, Standardna (kraljevska) pudla, Samojed, Sibirski haski, Dalmatinac, Čau-čau, Erdel terijer, Engleski pointer, Američki staford, Bul terijer.",
   },
   {
     id: 4,
@@ -47,9 +47,9 @@ const categories = [
     image: "/images/dog-categ-4.png",
     color: "#512772",
     description:
-      "Naši 'nežni džinovi'! Nega ekstra velikih pasa zahteva posebnu opremu, strpljenje i stručnost. Fokus kod ovih rasa je na detaljnom furminiranju mrtve dlake, nezi masivnih šapa i noktiju, kao i održavanju higijene dugodlakih regija.",
+      "Naši 'nežni džinovi'! Nega ekstra velikih pasa zahteva posebnu opremu, strpljenje i stručnost. Fokus kod ovih rasa je na detaljnom tretmanu protiv linjanja (uklanjanju mrtve dlake), nezi masivnih šapa i noktiju, kao i održavanju higijene dugodlakih regija.",
     breeds:
-      "Bernski planinski pas, Rotvajler, Kane Korso, Akita (Američka i Japanska), Njufaundlend, Alaski malamut, Doberman, Šarplaninac, Bernardinac.",
+      "Bernski planinski pas, Rotvajler, Kane Korso, Akita (Američka i Japanska), Njufaundlend, Alaski malamut, Šarplaninac, Bernardinac, Tibetanski mastif, Azijat, Crni ruski terijer.",
   },
 ];
 
@@ -266,9 +266,6 @@ export default function VodicZaVelicine() {
               style={{
                 fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
                 fontWeight: 600,
-                fontSize: "1rem",
-                paddingInline: "3rem",
-                height: "60px",
               }}
             >
               ZAKAŽITE TRETMAN

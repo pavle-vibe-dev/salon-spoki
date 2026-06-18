@@ -20,7 +20,7 @@ const servicesDetail = [
       "Tretman namenjen održavanju higijene između dva šišanja. Koristimo vrhunsku kozmetiku koja hrani dlaku, a profesionalno feniranje i izduvavanje uklanja svu mrtvu dlaku i nečistoće sa kože.",
   },
   {
-    title: "Furminiranje (Uklanjanje poddlake)",
+    title: "Tretman protiv linjanja (Uklanjanje poddlake)",
     image: "/images/service-brushing.jpg",
     description:
       "Spas protiv linjanja! Specijalnim alatima detaljno izvlačimo mrtvu poddlaku kod rasa koje se ne šišaju (poput labradora, retrivera, haskija, samojeda). Smanjuje linjanje u kući i do 80%.",
@@ -257,10 +257,6 @@ export default function Usluge() {
               style={{
                 fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
                 fontWeight: 600,
-                fontSize: "1.1rem",
-                paddingInline: "3.5rem",
-                height: "64px",
-                textDecoration: "none",
               }}
             >
               ZAKAŽITE ODMAH

@@ -27,7 +27,7 @@ const heroSlides = [
     title: "TRETMAN PROTIV\nLINJANJA PASA\nSPOKI SALON.",
     titleAccent: "SPOKI SALON.",
     subtitle:
-      "Profesionalno furminiranje i uklanjanje mrtve poddlake za sve rase. Smanjite linjanje kućnih ljubimaca do 90% uz naše specijalne premium tretmane u Novim Banovcima.",
+      "Profesionalni tretman protiv linjanja i uklanjanje mrtve poddlake za sve rase. Smanjite linjanje kućnih ljubimaca do 90% uz naše specijalne premium tretmane u Novim Banovcima.",
     buttonText: "Pogledajte usluge",
     buttonHref: "/usluge",
     image: "/images/slide2.png",
@@ -73,32 +73,32 @@ const bundleData = [
     id: 1, image: "/images/dog-categ-1.png", name: "Mali", dogCategory: "1 - 9 kg", color: "#ff4917",
     services: [
       { name: "Kompletan tretman", price: "3.000", list: ["Šišanje", "Kupanje", "Feniranje", "Sređivanje intimne regije", "Seckanje noktića", "Parfemisanje"] },
-      { name: "Kupanje", price: "1.000", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
-      { name: "Furminiranje", price: "1.800", list: ["Furminiranje", "Češljanje", "Feniranje", "Parfemisanje"] },
+      { name: "Kupanje", price: "1.500", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
+      { name: "Tretman protiv linjanja", price: "2.700", list: ["Tretman protiv linjanja", "Češljanje", "Feniranje", "Parfemisanje"] },
     ],
   },
   {
     id: 2, image: "/images/dog-categ-2.png", name: "Srednji", dogCategory: "10 - 19 kg", color: "#fbb040",
     services: [
       { name: "Kompletan tretman", price: "4.000", list: ["Šišanje", "Kupanje", "Feniranje", "Sređivanje intimne regije", "Seckanje noktića", "Parfemisanje"] },
-      { name: "Kupanje", price: "1.500", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
-      { name: "Furminiranje", price: "2.500", list: ["Furminiranje", "Češljanje", "Feniranje", "Parfemisanje"] },
+      { name: "Kupanje", price: "2.000", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
+      { name: "Tretman protiv linjanja", price: "3.700", list: ["Tretman protiv linjanja", "Češljanje", "Feniranje", "Parfemisanje"] },
     ],
   },
   {
     id: 3, image: "/images/dog-categ-3.png", name: "Veliki", dogCategory: "20 - 29 kg", color: "#3f7a8e",
     services: [
       { name: "Kompletan tretman", price: "5.000", list: ["Šišanje", "Kupanje", "Feniranje", "Sređivanje intimne regije", "Seckanje noktića", "Parfemisanje"] },
-      { name: "Kupanje", price: "2.000", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
-      { name: "Furminiranje", price: "3.000", list: ["Furminiranje", "Češljanje", "Feniranje", "Parfemisanje"] },
+      { name: "Kupanje", price: "2.500", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
+      { name: "Tretman protiv linjanja", price: "4.700", list: ["Tretman protiv linjanja", "Češljanje", "Feniranje", "Parfemisanje"] },
     ],
   },
   {
     id: 4, image: "/images/dog-categ-4.png", name: "Extra veliki", dogCategory: "30 - 39 kg", color: "#512772",
     services: [
       { name: "Kompletan tretman", price: "6.000+", list: ["Šišanje", "Kupanje", "Feniranje", "Sređivanje intimne regije", "Seckanje noktića", "Parfemisanje"] },
-      { name: "Kupanje", price: "2.500", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
-      { name: "Furminiranje", price: "3.500", list: ["Furminiranje", "Češljanje", "Feniranje", "Parfemisanje"] },
+      { name: "Kupanje", price: "3.000", list: ["Kupanje", "Feniranje", "Parfemisanje"] },
+      { name: "Tretman protiv linjanja", price: "5.700+", list: ["Tretman protiv linjanja", "Češljanje", "Feniranje", "Parfemisanje"] },
     ],
   },
 ];
@@ -194,7 +194,7 @@ export default function Home() {
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={`text-${activeIdx}`}
-                className="flex flex-col gap-6 order-2 lg:order-1"
+                className="flex flex-col gap-6 order-2 lg:order-1 text-center lg:text-left"
                 initial="hidden"
                 animate="visible"
                 exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
@@ -207,7 +207,7 @@ export default function Home() {
                 {slide.badge && (
                   <motion.div
                     variants={textVariants}
-                    className="inline-flex items-center gap-2 self-start rounded-full px-4 py-1.5"
+                    className="inline-flex items-center gap-2 self-center lg:self-start rounded-full px-4 py-1.5"
                     style={{
                       backgroundColor: "rgba(255,73,23,0.10)",
                       border: "1px solid rgba(255,73,23,0.25)",
@@ -244,14 +244,14 @@ export default function Home() {
                 {/* Subtitle */}
                 <motion.p
                   variants={textVariants}
-                  className="text-base md:text-lg leading-relaxed max-w-lg"
+                  className="text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0"
                   style={{ color: "var(--color-blue-secondary)" }}
                 >
                   {slide.subtitle}
                 </motion.p>
 
                 {/* CTA buttons */}
-                <motion.div variants={textVariants} className="flex items-center gap-4 flex-wrap">
+                <motion.div variants={textVariants} className="flex items-center justify-center lg:justify-start gap-4 flex-wrap">
                   <Link
                     href={slide.buttonHref}
                     className="btn"
@@ -304,7 +304,7 @@ export default function Home() {
         <button
           onClick={() => goTo(activeIdx - 1, -1)}
           aria-label="Prethodni slajd"
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 shadow-md"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full hidden md:flex items-center justify-center transition-all duration-200 shadow-md"
           style={{ backgroundColor: "#ffffff", color: "var(--color-orange-light)" }}
           onMouseEnter={(e) => {
             e.currentTarget.style.color = "var(--color-orange)";
@@ -323,7 +323,7 @@ export default function Home() {
         <button
           onClick={() => goTo(activeIdx + 1, 1)}
           aria-label="Sledeći slajd"
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 shadow-md"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full hidden md:flex items-center justify-center transition-all duration-200 shadow-md"
           style={{ backgroundColor: "#ffffff", color: "var(--color-orange-light)" }}
           onMouseEnter={(e) => {
             e.currentTarget.style.color = "var(--color-orange)";
@@ -547,8 +547,6 @@ export default function Home() {
               style={{
                 fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
                 fontWeight: 600,
-                fontSize: "1.1rem",
-                padding: "1rem 2.5rem",
               }}
             >
               Zakažite termin odmah
@@ -585,7 +583,7 @@ export default function Home() {
           </div>
 
           {/* Dog category circles */}
-          <div className="flex flex-wrap justify-between gap-y-10 gap-x-4 mb-20 w-full">
+          <div className="flex flex-wrap justify-center md:justify-between gap-y-10 gap-x-4 mb-20 w-full">
             {bundleData.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
@@ -747,18 +745,27 @@ export default function Home() {
             ))}
           </div>
 
+          {/* Napomena */}
+          <p
+            className="text-sm text-center my-8 max-w-2xl mx-auto"
+            style={{ color: "#6b7280" }}
+          >
+            Napomena: Navedene cene su informativnog karaktera. Konačna cena tretmana može varirati u
+            zavisnosti od rase, veličine psa i stanja dlake. Za tačnu procenu, slobodno nas kontaktirajte.
+          </p>
+
           {/* Guide CTA */}
-          <div className="flex justify-center mt-16">
+          <div className="flex justify-center mt-4">
             <Link
               href="/vodic-za-velicine"
-              className="inline-flex items-center gap-3"
+              className="inline-flex items-center gap-3 max-w-full"
               style={{
                 fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
                 fontWeight: 600,
-                fontSize: "1.05rem",
+                fontSize: "clamp(0.8rem, 3vw, 1.05rem)",
                 color: "#ffffff",
                 backgroundColor: "var(--color-orange)",
-                padding: "1rem 2.5rem",
+                padding: "0.75rem 1.5rem",
                 borderRadius: "9999px",
                 textDecoration: "none",
                 transition: "all 0.2s ease",
@@ -783,6 +790,78 @@ export default function Home() {
             </Link>
           </div>
 
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+          GALERIJA
+      ══════════════════════════════════════════════ */}
+      <section
+        aria-label="Galerija"
+        style={{ backgroundColor: "var(--color-body)", padding: "6rem 0" }}
+      >
+        <div className="section-container">
+          {/* Heading */}
+          <div className="text-center mb-14">
+            <h2
+              style={{
+                fontFamily: 'var(--font-passion-one), "Passion One", sans-serif',
+                fontSize: "clamp(2.2rem, 5vw, 3.6rem)",
+                fontWeight: 700,
+                color: "var(--color-blue)",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Galerija naših radova
+            </h2>
+            <p style={{ color: "var(--color-blue-secondary)", fontSize: "1.05rem" }}>
+              Pogledajte kako izgledaju naši zadovoljni klijenti
+            </p>
+          </div>
+
+          {/* Grid — 6 images */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4" style={{ maxWidth: "900px", margin: "0 auto" }}>
+            {[
+              "/images/gallery/galerija-pas1.jpg",
+              "/images/gallery/galerija-pas2.jpg",
+              "/images/gallery/galerija-pas3.jpg",
+              "/images/gallery/galerija-pas4.jpg",
+              "/images/gallery/galerija-pas5.jpg",
+              "/images/gallery/galerija-pas6.jpg",
+            ].map((src, idx) => (
+              <motion.div
+                key={src}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, ease: EASE, delay: idx * 0.08 }}
+                className="relative aspect-square rounded-2xl overflow-hidden"
+                style={{ backgroundColor: "#f5f5f5" }}
+              >
+                <Image
+                  src={src}
+                  alt={`Galerija ${idx + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover transition-all duration-500 hover:scale-105"
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="flex justify-center mt-12">
+            <Link
+              href="/galerija"
+              className="btn"
+              style={{
+                fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
+                fontWeight: 600,
+              }}
+            >
+              Pogledaj sve radove
+            </Link>
+          </div>
         </div>
       </section>
     </div>

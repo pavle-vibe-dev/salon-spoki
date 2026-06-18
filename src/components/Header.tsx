@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { name: "Početna",    href: "/" },
   { name: "Usluge",     href: "/usluge" },
+  { name: "Galerija",   href: "/galerija" },
   { name: "Zakazivanje", href: "/zakazivanje" },
   { name: "Kontakt",    href: "/kontakt" },
 ];
@@ -186,7 +187,7 @@ export default function Header() {
             className="lg:hidden overflow-hidden border-t"
             style={{ borderColor: "#f0f0f0" }}
           >
-            <nav className="flex flex-col px-5 py-4 gap-1">
+            <nav className="flex flex-col px-5 py-4 gap-1 text-center">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -207,7 +208,7 @@ export default function Header() {
               })}
 
               {/* Phone row in mobile menu */}
-              <div className="flex items-center gap-3 mt-3 px-4 py-3 rounded-xl bg-gray-50">
+              <div className="flex items-center justify-center gap-3 mt-3 px-4 py-3 rounded-xl bg-gray-50">
                 <Image
                   src="/images/phone.svg"
                   alt="Telefon"

@@ -15,7 +15,7 @@ const categoryNames: Record<number, string> = {
 const serviceNames: Record<string, string> = {
   kompletan: "Kompletan tretman",
   kupanje: "Kupanje",
-  furminiranje: "Furminiranje",
+  tretmanProtivLinjanja: "Tretman protiv linjanja",
 };
 
 const bundleData = [
@@ -36,7 +36,7 @@ const bundleData = [
 const serviceOptions = [
   { id: "kompletan", name: "Kompletan tretman" },
   { id: "kupanje", name: "Kupanje" },
-  { id: "furminiranje", name: "Furminiranje" },
+  { id: "tretmanProtivLinjanja", name: "Tretman protiv linjanja" },
 ];
 
 export default function ZakazivanjePage() {
@@ -232,20 +232,19 @@ export default function ZakazivanjePage() {
                 </div>
 
                 <div className="flex justify-center">
-                  <button
-                    onClick={() => selectedCategory && setStep(2)}
-                    disabled={!selectedCategory}
-                    className="btn"
-                    style={{
-                      opacity: selectedCategory ? 1 : 0.5,
-                      cursor: selectedCategory ? "pointer" : "not-allowed",
-                      fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
-                      fontWeight: 600,
-                      paddingInline: "3rem",
-                    }}
-                  >
-                    Nastavi
-                  </button>
+                    <button
+                      onClick={() => selectedCategory && setStep(2)}
+                      disabled={!selectedCategory}
+                      className="btn"
+                      style={{
+                        opacity: selectedCategory ? 1 : 0.5,
+                        cursor: selectedCategory ? "pointer" : "not-allowed",
+                        fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
+                        fontWeight: 600,
+                      }}
+                    >
+                      Nastavi
+                    </button>
                 </div>
               </motion.div>
             )}
@@ -359,7 +358,6 @@ export default function ZakazivanjePage() {
                       cursor: selectedService ? "pointer" : "not-allowed",
                       fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
                       fontWeight: 600,
-                      paddingInline: "3rem",
                     }}
                   >
                     Nastavi
@@ -529,7 +527,6 @@ export default function ZakazivanjePage() {
                       style={{
                         fontFamily: "var(--font-fredoka), Fredoka, sans-serif",
                         fontWeight: 600,
-                        paddingInline: "3rem",
                         opacity: isSending ? 0.6 : 1,
                         cursor: isSending ? "not-allowed" : "pointer",
                       }}
